@@ -4,10 +4,12 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: petejohanson
       url-base: https://github.com/petejohanson
+    - name: roblim
+      url-base: https://github.com/roblim
   projects:
     - name: zmk
-      remote: petejohanson
-      revision: shields/kyria-rev3
+      remote: roblim
+      revision: rob-zmk
       import: app/west.yml
   self:
     path: config
