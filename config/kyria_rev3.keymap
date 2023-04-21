@@ -47,6 +47,12 @@
                 <&kp RIGHT_BRACKET>,
                 <&kp RIGHT_BRACE>;
         };
+        caps_word: caps_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPS_WORD";
+            #binding-cells = <0>;
+            continue-list = <MINUS>;
+        };
     };
 
     keymap {
