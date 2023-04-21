@@ -15,6 +15,10 @@
     chain-length = <31>;// Uncomment if using both per-key and underglow LEDs
 };
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
 / {
     behaviors {
         mt_tap_pref: mt_tap_pref {
@@ -47,10 +51,6 @@
                 <&kp RIGHT_BRACKET>,
                 <&kp RIGHT_BRACE>;
         };
-    };
-
-    &caps_word {
-        continue-list = <UNDERSCORE MINUS>;
     };
 
     keymap {
