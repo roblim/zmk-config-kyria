@@ -30,7 +30,6 @@
     behaviors {
         mt_tap_pref: mt_tap_pref {
             compatible = "zmk,behavior-hold-tap";
-            label = "MT_TAP_PREF";
             bindings =
                 <&kp>,
                 <&kp>;
@@ -42,7 +41,6 @@
         };
         l_paren_brk: l_paren_brk {
             compatible = "zmk,behavior-tap-dance";
-            label = "L_PAREN_BRK";
             #binding-cells = <0>;
             bindings =
                 <&kp LEFT_PARENTHESIS>,
@@ -51,7 +49,6 @@
         };
         r_paren_brk: r_paren_brk {
             compatible = "zmk,behavior-tap-dance";
-            label = "R_PAREN_BRK";
             #binding-cells = <0>;
             bindings =
                 <&kp RIGHT_PARENTHESIS>,
@@ -81,7 +78,7 @@
             //    <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>,
             //    <&inc_dec_kp UP_ARROW DOWN_ARROW>;
 
-            label = "0. Base";
+            display-name = "0. Base";
         };
 
         numbers_edit_nav {
@@ -92,7 +89,7 @@
                                             &trans                                                   &trans                         &trans                 &trans  &trans  &mo 3   &trans  &trans                 &trans                                                    &trans
             >;
 
-            label = "1. Num";
+            display-name = "1. Num";
         };
 
         symbols {
@@ -103,7 +100,7 @@
                   &trans                      &trans              &trans               &trans  &mo 3   &trans  &trans  &trans      &trans                         &trans
             >;
 
-            label = "2. Sym";
+            display-name = "2. Sym";
         };
 
         adjust {
@@ -114,7 +111,7 @@
                                   &trans                      &trans        &ext_power EP_OFF  &trans  &trans  &trans  &trans  &ext_power EP_OFF  &trans                                      &trans
             >;
 
-            label = "3. Adj";
+            display-name = "3. Adj";
         };
     };
 };
