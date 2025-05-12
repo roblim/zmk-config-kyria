@@ -18,27 +18,22 @@
 // Overrides nice_view cs_gpios pin to D0 from D1, D1 is shared with
 // LED's and caused issues.
 
-&nice_view_spi {
-    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
-};
+&nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; };
 
-&caps_word {
-    continue-list = <UNDERSCORE MINUS>;
-};
+&caps_word { continue-list = <UNDERSCORE MINUS>; };
 
 / {
     behaviors {
         mt_tap_pref: mt_tap_pref {
             compatible = "zmk,behavior-hold-tap";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <180>;
             flavor = "tap-preferred";
         };
+
         l_paren_brk: l_paren_brk {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -47,6 +42,7 @@
                 <&kp LEFT_BRACKET>,
                 <&kp LEFT_BRACE>;
         };
+
         r_paren_brk: r_paren_brk {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -105,10 +101,10 @@
 
         adjust {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0          &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                       &rgb_ug RGB_EFR    &rgb_ug RGB_BRI       &rgb_ug RGB_BRD       &rgb_ug RGB_SPI  &rgb_ug RGB_SPD   &rgb_ug RGB_EFF
-&trans      &kp LG(LS(NUMBER_4))  &kp F11       &kp LC(DOWN)  &kp LC(UP)    &trans                                             &kp C_PREV         &kp C_VOL_UP          &kp C_VOL_DN          &kp C_MUTE       &kp C_PLAY_PAUSE  &kp C_NEXT
-&sys_reset  &trans                &trans        &out OUT_BLE  &out OUT_USB  &ext_power EP_ON   &trans  &trans  &trans  &trans  &ext_power EP_ON   &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &kp C_SLEEP      &kp C_AL_LOCK     &sys_reset
-                                  &trans                      &trans        &ext_power EP_OFF  &trans  &trans  &trans  &trans  &ext_power EP_OFF  &trans                                      &trans
+&bt BT_CLR      &bt BT_SEL 0          &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                       &rgb_ug RGB_EFR    &rgb_ug RGB_BRI       &rgb_ug RGB_BRD       &rgb_ug RGB_SPI  &rgb_ug RGB_SPD   &rgb_ug RGB_EFF
+&studio_unlock  &kp LG(LS(NUMBER_4))  &kp F11       &kp LC(DOWN)  &kp LC(UP)    &trans                                             &kp C_PREV         &kp C_VOL_UP          &kp C_VOL_DN          &kp C_MUTE       &kp C_PLAY_PAUSE  &kp C_NEXT
+&sys_reset      &trans                &trans        &out OUT_BLE  &out OUT_USB  &ext_power EP_ON   &trans  &trans  &trans  &trans  &ext_power EP_ON   &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &kp C_SLEEP      &kp C_AL_LOCK     &sys_reset
+                                      &trans                      &trans        &ext_power EP_OFF  &trans  &trans  &trans  &trans  &ext_power EP_OFF  &trans                                      &trans
             >;
 
             display-name = "3. Adj";
