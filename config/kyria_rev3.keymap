@@ -24,7 +24,6 @@
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
-    shift-list = <UNDERSCORE MINUS>;
 };
 
 / {

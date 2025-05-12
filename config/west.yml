@@ -8,8 +8,8 @@ manifest:
       url-base: https://github.com/roblim
   projects:
     - name: zmk
-      remote: roblim
-      revision: rob-zmk
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config
