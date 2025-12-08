@@ -53,6 +53,21 @@
         };
     };
 
+    macros {
+        f_key: f_key {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp GLOBE>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>;
+
+            label = "F_KEY";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -66,7 +81,7 @@
             bindings = <
 &kp EQUAL  &kp Q                        &kp W                    &kp F                    &kp P                      &kp G                                                          &kp J      &kp L                       &kp U                     &kp Y                    &kp SEMI                      &kp BSLH
 &kp TAB    &mt_tap_pref LEFT_CONTROL A  &mt_tap_pref LEFT_ALT R  &mt_tap_pref LEFT_GUI S  &mt_tap_pref LEFT_SHIFT T  &kp D                                                          &kp H      &mt_tap_pref RIGHT_SHIFT N  &mt_tap_pref RIGHT_GUI E  &mt_tap_pref LEFT_ALT I  &mt_tap_pref RIGHT_CONTROL O  &kp SQT
-&kp ESC    &kp Z                        &kp X                    &kp C                    &kp V                      &kp B    &sk LSHFT      &l_paren_brk  &r_paren_brk  &kp MINUS  &kp K      &kp M                       &kp COMMA                 &kp DOT                  &kp FSLH                      &caps_word
+&kp ESC    &kp Z                        &kp X                    &kp C                    &kp V                      &kp B    &sl 4          &l_paren_brk  &r_paren_brk  &kp MINUS  &kp K      &kp M                       &kp COMMA                 &kp DOT                  &kp FSLH                      &caps_word
                                         &sk LEFT_SHIFT                                    &kp GRAVE                  &kp DEL  &kp BACKSPACE  &sl 1         &sl 2         &kp SPACE  &kp ENTER  &rgb_ug RGB_TOG                                       &sk RIGHT_SHIFT
             >;
 
@@ -110,12 +125,17 @@
             display-name = "3. Adj";
         };
 
-        extra_1 {
-            status = "reserved";
+        F-keys {
+            bindings = <
+&trans  &f_key F1  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                   &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
+            >;
         };
 
-        extra_2 {
-            status = "reserved";
-        };
+        extra_1 { status = "reserved"; };
+
+        extra_2 { status = "reserved"; };
     };
 };
