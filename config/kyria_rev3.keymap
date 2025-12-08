@@ -125,7 +125,7 @@
             display-name = "3. Adj";
         };
 
-        F-keys {
+        f_keys {
             bindings = <
 &trans  &f_key F1  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
