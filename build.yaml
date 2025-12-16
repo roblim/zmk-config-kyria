@@ -13,9 +13,9 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano@2.0.0
     shield: kyria_rev3_left nice_view_adapter nice_view
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: nice_nano_v2
+  - board: nice_nano@2.0.0
     shield: kyria_rev3_right nice_view_adapter nice_view
