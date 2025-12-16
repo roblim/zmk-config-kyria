@@ -58,10 +58,12 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_press &kp GLOBE>,
-                <&macro_param_1to1>,
-                <&macro_tap &kp MACRO_PLACEHOLDER>,
-                <&macro_release &kp GLOBE>;
+                <&macro_press>,
+                <&kp GLOBE &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp GLOBE>;
 
             label = "F_KEY";
         };
@@ -126,10 +128,10 @@
 
         f_keys {
             bindings = <
-&trans  &f_key F1  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                   &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
+&f_key F1  &f_key F2  &f_key F3  &f_key F4  &f_key F5  &f_key F6                                  &f_key F7  &f_key F8  &f_key F9  &f_key F10  &f_key F11  &f_key F12
+&trans     &trans     &trans     &trans     &trans     &trans                                     &trans     &trans     &trans     &trans      &trans      &trans
+&trans     &trans     &trans     &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans      &trans      &trans
+                      &trans                &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans                &trans
             >;
         };
 
