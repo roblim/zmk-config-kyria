@@ -54,7 +54,7 @@
 
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HML";
+
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -68,7 +68,7 @@
 
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
+
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -93,7 +93,6 @@
                 <&macro_release>,
                 <&kp GLOBE>;
 
-            label = "F_KEY";
         };
     };
 
